@@ -6,9 +6,9 @@ const Header = () => {
     return (
         <div>
             <nav className='flex justify-between'>
-                <h2>JobPub</h2>
+                <Link to='/' ><h2 className='cursor-pointer'>JobPub</h2></Link>
                 <div>
-                    <Link className='ml-8'>Applied Jobs</Link>
+                    <Link to='/Applied_Jobs' className='ml-8'>Applied Jobs</Link>
                     <Link className='ml-8'>Statistics</Link>
                     <Link className='ml-8'>Blog</Link>
                 </div>
