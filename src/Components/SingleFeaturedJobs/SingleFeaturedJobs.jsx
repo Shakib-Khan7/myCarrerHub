@@ -22,7 +22,7 @@ const SingleFeaturedJobs = ({job}) => {
                 </div>
                 
             </div>
-            <Link to={`/JobDetails/${id}`}>
+            <Link to={`job/JobDetails/${id}`}>
             <button className='py-2 px-5 bg-violet-500 text-white font-semibold rounded shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75 absolute bottom-4'  >View Details</button>
             </Link>
         </div>

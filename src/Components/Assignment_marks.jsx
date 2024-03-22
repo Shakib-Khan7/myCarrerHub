@@ -33,8 +33,9 @@ const Assignment_marks = () => {
                                   
       
     return (
-        <div>
-            <FunnelChart width={790} height={250}>
+        <div className='max-h-full'>
+           <center>
+           <FunnelChart width={350} height={250}>
         <><Tooltip /><Funnel
               dataKey="value"
               data={data}
@@ -43,6 +44,7 @@ const Assignment_marks = () => {
               <LabelList position="down" fill="#000" stroke="none" dataKey="name" />
           </Funnel></>
       </FunnelChart>
+           </center>
         </div>
     );
 };
