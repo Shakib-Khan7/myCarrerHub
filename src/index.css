@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container {
+    @apply px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-2
+}
+
+.btn-primary {
+    @apply font-medium transition duration-200 shadow-md md:mb-0 px-4 py-2 md:px-8 md:py-3 text-sm rounded-full border-transparent border-2 text-gray-700 hover:bg-cyan-400 bg-cyan-200
+}
+.btn-secondary {
+    @apply font-medium transition duration-200 shadow-md md:mb-0 px-4 py-2 md:px-6 md:py-3 text-sm rounded border-transparent border-2 text-gray-700 hover:bg-cyan-400 border-purple-400
+}
+.my-font{
+    font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.my-btn{
+    @apply py-2 px-5 bg-violet-500 text-white font-semibold rounded shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75
+}

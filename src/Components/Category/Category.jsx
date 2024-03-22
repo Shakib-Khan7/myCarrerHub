@@ -9,9 +9,9 @@ const Category = () => {
     
     
     return (
-        <div>
-            <center><h1>Job Category List</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam amet laborum culpa, soluta necessitatibus aliquam quis nemo provident blanditiis.</p></center>
+        <div className='mt-8'>
+            <center><h1 className='font-bold text-3xl mb-6 my-font'>Job Category List</h1>
+            <p className='font-sans mb-6'>Explore thousands of job opportunities with all the information you need. Its your future</p></center>
 
             <div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-10'>
             {

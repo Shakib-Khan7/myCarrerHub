@@ -35,10 +35,12 @@ const AppliedJobs = () => {
         setfilteredmyJobs(savedJobs)
     },[myJobs])
     
-    console.log(filteredmyJobs)
+    
+   
     
 
     const onSite = ()=>{
+        
         let onSiteJobs = []
         const onSite = filteredmyJobs.filter(job=>job.remote_or_onsite === 'Onsite')
         if(onSite){
@@ -47,6 +49,7 @@ const AppliedJobs = () => {
         }
     }
     const remote = ()=>{
+        
         let onSiteJobs = []
         const remote = filteredmyJobs.filter(job=>job.remote_or_onsite === 'Remote')
         if(remote){

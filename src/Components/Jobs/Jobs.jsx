@@ -13,17 +13,20 @@ const Jobs = () => {
     
     return (
         <div>
-            <div className='flex justify-between bg-gray-50'>
-                <div className='mt-10'>
-                    <h1>One Step <br />Closer to your <br />Dream job</h1>
-                    <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, necessitatibus.</small></p>
-                    <button>Get Started</button>
+            <div className='flex justify-between bg-gray-50 lg:px-52'>
+                <div className='mt-10 space-y-4'>
+                    <div className=''>
+                    <h1 className='font-bold mb-2 leading-2  text-5xl'>One Step <br />Closer To Your <br /><span className='text-violet-700'>Dream Job</span></h1>
+                    <p className='font-sans'><small>Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish..</small></p>
+                    </div>
+                    <button className='btn-primary'>Get Started</button>
                 </div>
                 <div>
-                    <img className='w-80' src={logo} alt="" />
+                    <img className='hidden md:block w-80' src={logo} alt="" />
                 </div>
             </div>
 
+            <div className='my-container'>
             <div>
                 <CategoriesContext.Provider value={jobCategories[0]}>
                     <Category></Category>
@@ -34,6 +37,7 @@ const Jobs = () => {
                 <FeaturedJobsContext.Provider value={jobCategories[1]}>
                 <FeaturedJobs></FeaturedJobs>
                 </FeaturedJobsContext.Provider>
+            </div>
             </div>
 
 
