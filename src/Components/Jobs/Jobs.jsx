@@ -1,13 +1,14 @@
-import React, { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import logo from '../Jobs/hardy.png'
 import Category from '../Category/Category';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
+import { Categories } from '../Home/Home';
 export const CategoriesContext = createContext()
 export const FeaturedJobsContext = createContext()
 
 const Jobs = () => {
-    const jobCategories = useLoaderData()
+    const jobCategories = useContext(Categories)
     console.log(jobCategories[0])
     
     
@@ -28,15 +29,15 @@ const Jobs = () => {
 
             <div className='my-container'>
             <div>
-                <CategoriesContext.Provider value={jobCategories[0]}>
+               
                     <Category></Category>
-                </CategoriesContext.Provider>
+                
             </div>
 
             <div>
-                <FeaturedJobsContext.Provider value={jobCategories[1]}>
+                
                 <FeaturedJobs></FeaturedJobs>
-                </FeaturedJobsContext.Provider>
+                
             </div>
             </div>
 

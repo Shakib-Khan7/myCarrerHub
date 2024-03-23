@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { CategoriesContext } from '../Jobs/Jobs';
 import SingleCategory from '../SingleCategory/SingleCategory';
+import { Categories } from '../Home/Home';
 
 
 
 const Category = () => {
-    const categories = useContext(CategoriesContext)
+    const jobCategories = useContext(Categories)
     
     
     return (
@@ -15,7 +16,7 @@ const Category = () => {
 
             <div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-10'>
             {
-                categories.map(c=> 
+                jobCategories[0].map(c=> 
                 <SingleCategory key={c.id} category={c}>
                     
                 </SingleCategory>)

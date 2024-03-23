@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FeaturedJobsContext } from '../Jobs/Jobs';
 import SingleFeaturedJobs from '../SingleFeaturedJobs/SingleFeaturedJobs';
+import { Categories } from '../Home/Home';
 
 const FeaturedJobs = () => {
-    const featuredJobs = useContext(FeaturedJobsContext)
+    const featuredJobs = useContext(Categories)
     console.log(featuredJobs)
     const [fold, setFold] = useState(true)
 
@@ -21,7 +22,7 @@ const FeaturedJobs = () => {
             <div className='grid lg:grid-cols-2 gap-10 sm:grid-cols-1 mb-10'>
                 {
 
-                    fold ? <>{(featuredJobs.slice(0, 4).map(job => <SingleFeaturedJobs key={job.id}
+                    fold ? <>{(featuredJobs[1].slice(0, 4).map(job => <SingleFeaturedJobs key={job.id}
                         job={job}
                     ></SingleFeaturedJobs>))}
                     
@@ -29,7 +30,7 @@ const FeaturedJobs = () => {
                     
                     </>
                     
-                     : <>{(featuredJobs.map(job => <SingleFeaturedJobs key={job.id}
+                     : <>{(featuredJobs[1].map(job => <SingleFeaturedJobs key={job.id}
                         job={job}
                     ></SingleFeaturedJobs>))}
                     

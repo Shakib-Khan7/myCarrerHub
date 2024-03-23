@@ -20,11 +20,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    loader: allLoaders,
     children: [
       {
         path: '/',
         element: <Jobs></Jobs>,
-        loader: allLoaders
+        
 
       },
       {
