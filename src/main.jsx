@@ -11,9 +11,11 @@ import Home from './Components/Home/Home.jsx';
 import Jobs from './Components/Jobs/Jobs.jsx';
 import FeaturedJobs from './Components/FeaturedJobs/FeaturedJobs.jsx';
 import allLoaders from './Components/Loaders.js';
-import JobDetails from './Components/JobDetails/JobDetails.jsx';
+// import JobDetails from './Components/JobDetails/JobDetails.jsx';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs.jsx';
 import Assignment_marks from './Components/Assignment_marks.jsx';
+import Blog from './Components/Blog/Blog.jsx';
+import JobDetail from './Components/JobDetail/JobDetail.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,11 +28,15 @@ const router = createBrowserRouter([
 
       },
       {
-        path: 'JobDetails/:id',
-        element: <JobDetails></JobDetails>,
-        loader: ({ params }) => fetch(`job-${params.id}.json`)
-
+        path : '/blog',
+        element : <Blog></Blog>
       },
+      {
+        path : '/details/:id',
+        element : <JobDetail></JobDetail>,
+        loader : ({params})=> fetch(`job-${params.id}.json`)
+      },
+      
       {
         path: 'Applied_Jobs',
         element: <AppliedJobs></AppliedJobs>,

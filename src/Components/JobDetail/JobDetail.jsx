@@ -3,10 +3,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { addToDb } from '../Utilities/FakeDB';
 
-const JobDetails = () => {
-    const jobData = useLoaderData()
-    console.log(jobData)
-    const { id, job_description, job_title, salary, contact_information, job_responsibility, educational_requirements, experiences } = jobData
+const JobDetail = () => {
+    const myJobDetails = useLoaderData()
+    console.log(myJobDetails)
+    const { id, job_description, job_title, salary, contact_information, job_responsibility, educational_requirements, experiences } = myJobDetails;
+    // console.log(contact_information)
     return (
         <div>
             <div className='bg-gray-50 pt-20 pb-20'>
@@ -41,11 +42,11 @@ const JobDetails = () => {
 
                         <hr className='mb-2'></hr>
 
-                        <p><span className='mb-3 font-semibold'>Phone : </span><span className='font-serif'>{contact_information.phone}</span></p>
+                        {/* <p><span className='mb-3 font-semibold'>Phone : </span><span className='font-serif'>{contact_information.phone}</span></p> */}
 
-                        <p className='mb-3'><span className='font-semibold'>Email</span> : <span className='font-serif'>{contact_information.email}</span></p>
+                        {/* <p className='mb-3'><span className='font-semibold'>Email</span> : <span className='font-serif'>{contact_information.email}</span></p> */}
 
-                        <p className='mb-3'><span className='font-semibold'>Address</span> : <span className='font-serif'>{contact_information.address}</span></p>
+                        {/* <p className='mb-3'><span className='font-semibold'>Address</span> : <span className='font-serif'>{contact_information.address}</span></p> */}
 
                         <button onClick={() => addToDb(id)} className='py-2 px-5 bg-violet-500 text-white font-semibold rounded shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 w-full focus:ring-opacity-75'>APPLY NOW</button>
                     </div>
@@ -55,4 +56,4 @@ const JobDetails = () => {
     );
 };
 
-export default JobDetails;
+export default JobDetail;

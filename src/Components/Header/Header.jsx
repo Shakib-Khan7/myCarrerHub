@@ -15,7 +15,7 @@ const Header = () => {
                 <div className='grid grid-cols-3 gap-5'>
                     <ActiveLink to='/Applied_Jobs' className=''>Applied Jobs</ActiveLink>
                     <ActiveLink to='/statistics'>Statistics</ActiveLink>
-                    <Link>Blog</Link>
+                    <Link to='/blog'>Blog</Link>
                 </div>
 
                 <div>
